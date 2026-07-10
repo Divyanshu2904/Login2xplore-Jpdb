@@ -1,34 +1,31 @@
-# JsonPowerDB Employee Management Form
+# JsonPowerDB Web Applications
 
-This is a single-page Employee Management Form built with HTML, CSS (Bootstrap 5), and JavaScript (jQuery) that interacts with **JsonPowerDB (JPDB)** via REST APIs.
+This repository contains two web applications built for the **Login2Xplore** assignment using HTML, CSS (Bootstrap 5), JavaScript, and the **JsonPowerDB (JPDB)** REST API. It demonstrates fully functional CRUD operations directly from the frontend.
 
-## Features
-- **Create** new employee records (Employee ID, Name, Salary, HRA, DA, Deduction).
-- **Read/Fetch** existing employee details by simply entering the Employee ID and pressing `Tab` (or losing focus).
-- **Update** existing employee details using the `Change` button.
-- Clean and modern **Glassmorphism UI** utilizing Bootstrap 5.
-- Uses `jpdb-commons.js` library for simplified AJAX requests.
+## 📂 Project Structure
+- **[Employee-Form](./Employee-Form)**: Practice assignment for managing Employee data (Salary, HRA, DA, etc.).
+- **[Student-Enrollment-Form](./Student-Enrollment-Form)**: Final Micro-Project for managing Student data (Roll No, Class, DOB, etc.).
 
-## How to Run
-1. Clone the repository.
-2. Open `script.js` and locate line 8:
-   ```javascript
-   var connToken = "YOUR_CONNECTION_TOKEN_HERE";
-   ```
-3. Replace `"YOUR_CONNECTION_TOKEN_HERE"` with your actual Connection Token from the Login2Xplore Developer Dashboard.
-4. Open `index.html` in any modern web browser.
-5. Enjoy seamless database operations directly from the browser!
+## 🚀 Features
+- **Create (Save)**: Add new records to the JPDB database.
+- **Read (Fetch)**: Fetch existing records automatically when Primary Key (Employee ID / Roll No) is entered.
+- **Update (Change)**: Modify existing records dynamically.
+- **Modern UI**: Built with Bootstrap 5 and customized Glassmorphism CSS styling.
+- **Form Validations**: Built-in visual invalid-feedback for empty fields.
+- **UX Polish**: Spinners on buttons while saving/updating, Auto-calculated Net Salary, and Toast Alerts for success/error states.
 
-## Technology Stack
+## 🛠️ Technology Stack
 - **Frontend**: HTML5, CSS3, Bootstrap 5
-- **JavaScript**: Vanilla JS, jQuery (for AJAX requests)
-- **Database**: JsonPowerDB (JPDB)
+- **JavaScript**: ES6 (let/const), jQuery
+- **Database**: JsonPowerDB (JPDB) via `jpdb-commons.js`
 
-## Workflow Example
-1. **Enter Employee ID**: Type an ID (e.g., `EMP01`) and press `Tab`.
-2. **If ID does not exist**: The form will unlock the remaining fields. You can fill them in and click **Save**.
-3. **If ID exists**: The form will fetch the existing data from JPDB and populate the fields. You can modify the details and click **Change**.
-4. **Reset**: Use the **Reset** button to clear the form at any time.
+## ⚙️ Setup & How to Run
+1. Clone this repository to your local machine.
+2. Open the `script.js` file inside the respective project folder.
+3. Replace the placeholder token with your actual **Connection Token** from the Login2Xplore Developer Dashboard (if needed, it is currently preset).
+   ```javascript
+   const connToken = "YOUR_CONNECTION_TOKEN";
+   ```
+4. Double click `index.html` to run the project in any modern browser.
 
-## Assignment Details
-Designed for the Login2Xplore assignment, following standard practices of utilizing JPDB's API endpoints (`/api/irl` for GET, `/api/iml` for PUT/UPDATE) alongside the provided `jpdb-commons.js` helper library.
+> 🔒 **Security Note**: In a production environment, Connection Tokens should be handled securely on a backend server. In this project, the token is exposed client-side purely for educational/demo purposes, as per JsonPowerDB's client-side integration architecture for this assignment.
