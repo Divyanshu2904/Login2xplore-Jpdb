@@ -29,3 +29,4 @@ This repository contains two web applications built for the **Login2Xplore** ass
 4. Double click `index.html` to run the project in any modern browser.
 
 > 🔒 **Security Note**: In a production environment, Connection Tokens should be handled securely on a backend server. In this project, the token is exposed client-side purely for educational/demo purposes, as per JsonPowerDB's client-side integration architecture for this assignment.
+
