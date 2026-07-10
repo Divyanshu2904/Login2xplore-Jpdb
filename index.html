@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - JPDB Assignment</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- jQuery (Required for JPDB and AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- JPDB Commons Library -->
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card glass-card shadow-lg p-5">
+            <h2 class="text-center mb-4 form-title">Employee Management Form</h2>
+            <form id="empForm" method="post">
+                
+                <div class="form-group mb-3 position-relative">
+                    <label for="empId" class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" name="empId" id="empId" placeholder="Enter Employee ID (e.g. EMP01)" required>
+                    <div class="form-text text-muted">Enter ID and press Tab to fetch or create a new employee.</div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="empName" class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" name="empName" id="empName" placeholder="Enter Employee Name" disabled>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="empSalary" class="form-label">Basic Salary (₹)</label>
+                    <input type="number" class="form-control" name="empSalary" id="empSalary" placeholder="Enter Basic Salary" disabled>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 form-group mb-4">
+                        <label for="empHRA" class="form-label">HRA (%)</label>
+                        <input type="number" class="form-control" name="empHRA" id="empHRA" placeholder="HRA" disabled>
+                    </div>
+                    <div class="col-md-4 form-group mb-4">
+                        <label for="empDA" class="form-label">DA (%)</label>
+                        <input type="number" class="form-control" name="empDA" id="empDA" placeholder="DA" disabled>
+                    </div>
+                    <div class="col-md-4 form-group mb-4">
+                        <label for="empDeduct" class="form-label">Deduction (₹)</label>
+                        <input type="number" class="form-control" name="empDeduct" id="empDeduct" placeholder="Deductions" disabled>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-2">
+                    <button type="button" class="btn btn-primary btn-custom" id="empSave" onclick="saveEmployee()" disabled>Save</button>
+                    <button type="button" class="btn btn-warning btn-custom text-white" id="empChange" onclick="changeEmployee()" disabled>Change</button>
+                    <button type="button" class="btn btn-secondary btn-custom" id="empReset" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
