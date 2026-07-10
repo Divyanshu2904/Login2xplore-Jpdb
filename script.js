@@ -6,7 +6,7 @@ var empDBName = "EMP-DB";
 var empRelationName = "EmpData";
 
 // TODO: Replace with your actual Connection Token from Login2Xplore Dashboard
-var connToken = "YOUR_CONNECTION_TOKEN_HERE"; 
+var connToken = "90935064|-31949248061646868|90904000"; 
 
 // --- Initial Setup ---
 $(document).ready(function() {
